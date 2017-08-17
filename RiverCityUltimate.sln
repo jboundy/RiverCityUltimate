@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiverCityUltimate", "RiverCityUltimate\RiverCityUltimate.csproj", "{365DAD85-4746-442B-8C5A-775CEA6AA47A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiverCityUltimate.Tests", "RiverCityUltimate.Tests\RiverCityUltimate.Tests.csproj", "{398D8DBA-2EF1-4071-8655-D8004690D901}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{365DAD85-4746-442B-8C5A-775CEA6AA47A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{365DAD85-4746-442B-8C5A-775CEA6AA47A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{365DAD85-4746-442B-8C5A-775CEA6AA47A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{365DAD85-4746-442B-8C5A-775CEA6AA47A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{398D8DBA-2EF1-4071-8655-D8004690D901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{398D8DBA-2EF1-4071-8655-D8004690D901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{398D8DBA-2EF1-4071-8655-D8004690D901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{398D8DBA-2EF1-4071-8655-D8004690D901}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
