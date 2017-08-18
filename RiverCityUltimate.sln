@@ -7,6 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiverCityUltimate", "RiverC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiverCityUltimate.Tests", "RiverCityUltimate.Tests\RiverCityUltimate.Tests.csproj", "{398D8DBA-2EF1-4071-8655-D8004690D901}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiverCityUltimate.Core", "RiverCityUltimateCore\RiverCityUltimate.Core.csproj", "{943692AB-DAAD-4CF4-BBFD-82014B9ACEA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiverCityUltimate.GoogleIntegration", "RiverCityUltimate.GoogleIntegration\RiverCityUltimate.GoogleIntegration.csproj", "{E13FBDA8-62CF-43BD-8790-F8F0BE5F59E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_tests", "_tests", "{110345C8-E504-4939-880E-CD7015773957}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiverCityUltimate.GoogleIntegration.Tests", "RiverCityUltimate.GoogleIntegration.Tests\RiverCityUltimate.GoogleIntegration.Tests.csproj", "{88892C36-2C4F-4C71-9C0A-F17AC4D2D45C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +29,24 @@ Global
 		{398D8DBA-2EF1-4071-8655-D8004690D901}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{398D8DBA-2EF1-4071-8655-D8004690D901}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{398D8DBA-2EF1-4071-8655-D8004690D901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{943692AB-DAAD-4CF4-BBFD-82014B9ACEA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{943692AB-DAAD-4CF4-BBFD-82014B9ACEA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{943692AB-DAAD-4CF4-BBFD-82014B9ACEA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{943692AB-DAAD-4CF4-BBFD-82014B9ACEA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E13FBDA8-62CF-43BD-8790-F8F0BE5F59E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E13FBDA8-62CF-43BD-8790-F8F0BE5F59E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E13FBDA8-62CF-43BD-8790-F8F0BE5F59E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E13FBDA8-62CF-43BD-8790-F8F0BE5F59E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88892C36-2C4F-4C71-9C0A-F17AC4D2D45C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88892C36-2C4F-4C71-9C0A-F17AC4D2D45C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88892C36-2C4F-4C71-9C0A-F17AC4D2D45C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88892C36-2C4F-4C71-9C0A-F17AC4D2D45C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{398D8DBA-2EF1-4071-8655-D8004690D901} = {110345C8-E504-4939-880E-CD7015773957}
+		{88892C36-2C4F-4C71-9C0A-F17AC4D2D45C} = {110345C8-E504-4939-880E-CD7015773957}
 	EndGlobalSection
 EndGlobal
