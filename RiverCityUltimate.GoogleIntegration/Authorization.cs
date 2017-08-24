@@ -1,34 +1,49 @@
-﻿using System.Threading;
+﻿using System;
+using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using Google.Apis.Auth.OAuth2;
+using Google.Apis.Auth.OAuth2.Flows;
+using Google.Apis.Auth.OAuth2.Requests;
+using Google.Apis.Auth.OAuth2.Responses;
 using Google.Apis.Drive.v3;
-using Google.Apis.Services;
+using Google.Apis.Sheets.v4;
+using Google.Apis.Util;
 using RiverCityUltimate.Core;
 
 namespace RiverCityUltimate.GoogleIntegration
 {
     public class Authorization
     {
-        public async Task<FilesResource.ExportRequest> ExportRequestAsync()
+        public async Task<TokenResponse> ConfigureCredentials()
         {
-            string[] scopes = { DriveService.Scope.DriveFile, DriveService.Scope.Drive };
-
-            var clientSecrets = new ClientSecrets
+            IClock clock = null;
+            var flow = new GoogleAuthorizationCodeFlow(new GoogleAuthorizationCodeFlow.Initializer
             {
-                ClientId = Settings.GoogleConfig.ClientId,
-                ClientSecret = Settings.GoogleConfig.ClientSecret
-            };
-            
-            //todo: find some other way to get the credentials. Might just use a standard httprequest to the endpoint
-            var credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(clientSecrets, scopes , "user", CancellationToken.None );
-
-            var service = new DriveService(new BaseClientService.Initializer
-            {
-                HttpClientInitializer = credential,
-                ApplicationName = Settings.GoogleConfig.ProjectId
+                ClientSecrets = new ClientSecrets
+                {
+                    ClientId = Settings.GoogleConfig.ClientId,
+                    ClientSecret = Settings.GoogleConfig.ClientSecret
+                },
+                Scopes = new[] {
+                    DriveService.Scope.DriveFile,
+                    DriveService.Scope.Drive,
+                    SheetsService.Scope.SpreadsheetsReadonly
+                }
             });
 
-            return service.Files.Export(Settings.GoogleConfig.FileId, "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+            var tokenRequest = new TokenRequest
+            {
+                ClientId = Settings.GoogleConfig.ClientId,
+                ClientSecret = Settings.GoogleConfig.ClientSecret,
+                GrantType = "authorization_code"
+            };
+
+            return await tokenRequest.ExecuteAsync(new HttpClient
+                {
+                    BaseAddress = new Uri(Settings.GoogleConfig.AuthUri)
+                },
+                Settings.GoogleConfig.TokenUri, CancellationToken.None, clock);
         }
     }
 }
