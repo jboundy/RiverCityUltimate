@@ -9,7 +9,6 @@ namespace RiverCityUltimate.GoogleIntegration
     public class ApiService
     {
         public DriveService DriveService;
-
         public SheetsService SheetService;
         public void ConfigureServices(UserCredential credentials)
         {
