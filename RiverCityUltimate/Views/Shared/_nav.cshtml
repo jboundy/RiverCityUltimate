@@ -1,0 +1,21 @@
+﻿ <div class="navbar navbar-inverse navbar-fixed-top nav-color">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse nav-position">
+            <ul class="nav navbar-nav nav-button-color">
+                <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-button-color" })</li>
+                <li>@Html.ActionLink("Scores & Schedules", "ScoreSchedules", "Home")</li>
+                <li>@Html.ActionLink("Standings", "Standings", "Home")</li>
+                <li>@Html.ActionLink("Registration", "Registration", "Home")</li>
+                <li>@Html.ActionLink("Store", "Store", "Home")</li>
+                <li>@Html.ActionLink("About Us", "About", "Home")</li>
+            </ul>
+         </div>
+     </div>
+ </div>

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace RiverCityUltimate.Controllers
 {
@@ -15,15 +11,26 @@ namespace RiverCityUltimate.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Registration()
         {
-            ViewBag.Message = "Your contact page.";
+            return View();
+        }
 
+        public ActionResult ScoreSchedules()
+        {
+            return View("Scores_Schedules");
+        }
+
+        public ActionResult Standings()
+        {
+            return View();
+        }
+
+        public ActionResult Store()
+        {
             return View();
         }
     }

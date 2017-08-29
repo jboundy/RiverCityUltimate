@@ -22,3 +22,26 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.footer {
+    width: 100%;
+    color: #999999;
+    background-color: #333333;
+    float: left;
+}
+
+.nav-color {
+    background-color: #01a6bf !important;
+}
+
+.nav-button-color {
+    color: #f9f9f9 !important;
+}
+
+.nav-position {
+    float: right !important;
+}
+
+.ul nav li {
+    text-transform: uppercase;
+}
