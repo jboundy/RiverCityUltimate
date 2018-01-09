@@ -18,19 +18,15 @@ namespace RiverCityUltimate.GoogleIntegration
             _sheets = sheets;
         }
 
-        public SpreadsheetsResource.GetRequest SpreadsheetRequest(string spreadSheetId)
+        public async Task<Spreadsheet> SheetStream(string spreadSheetId)
         {
-            return _sheets.Spreadsheets.Get(spreadSheetId);
-        }
-
-        public async Task<Spreadsheet> SheetStream(SpreadsheetsResource.GetRequest request)
-        {
-            return await request.ExecuteAsync();
+            return await _sheets.Spreadsheets.Get(spreadSheetId).ExecuteAsync();
         }
 
         public FilesResource.ExportRequest FileRequest(string fileId)
         {
-            return _drive.Files.Export(fileId, "text/plain");
+            //todo: should get rid of the plain text for the encoded type
+            return _drive.Files.Export(fileId, "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
         }
 
         public async Task<IDownloadProgress> FileStream(FilesResource.ExportRequest request)

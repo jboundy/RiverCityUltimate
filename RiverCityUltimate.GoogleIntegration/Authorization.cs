@@ -4,6 +4,7 @@ using Google.Apis.Auth.OAuth2;
 using Google.Apis.Auth.OAuth2.Flows;
 using Google.Apis.Auth.OAuth2.Requests;
 using Google.Apis.Drive.v3;
+using Google.Apis.Http;
 using Google.Apis.Sheets.v4;
 using Google.Apis.Util;
 using RiverCityUltimate.Core;
@@ -28,14 +29,15 @@ namespace RiverCityUltimate.GoogleIntegration
                     DriveService.Scope.Drive,
                     SheetsService.Scope.SpreadsheetsReadonly
                 },
-                IncludeGrantedScopes = true
+                IncludeGrantedScopes = true,
+                HttpClientFactory = new HttpClientFactory()
             });
 
             var tokenRequest = new TokenRequest
             {
                 ClientId = Settings.GoogleConfig.ClientId,
                 ClientSecret = Settings.GoogleConfig.ClientSecret,
-                GrantType = "authorization_code"
+                GrantType = Settings.GoogleConfig.AuthorizationCode
             };
 
             var tokenResponse = await tokenRequest.ExecuteAsync(flow.HttpClient, Settings.GoogleConfig.TokenUri, CancellationToken.None, Clock);

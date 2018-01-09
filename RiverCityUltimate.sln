@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiverCityUltimate", "RiverCityUltimate\RiverCityUltimate.csproj", "{365DAD85-4746-442B-8C5A-775CEA6AA47A}"
 EndProject
@@ -48,5 +48,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{398D8DBA-2EF1-4071-8655-D8004690D901} = {110345C8-E504-4939-880E-CD7015773957}
 		{88892C36-2C4F-4C71-9C0A-F17AC4D2D45C} = {110345C8-E504-4939-880E-CD7015773957}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66192E18-1382-41B4-A9A7-CD5DB465D15C}
 	EndGlobalSection
 EndGlobal

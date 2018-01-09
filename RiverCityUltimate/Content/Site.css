@@ -30,18 +30,23 @@ textarea {
     float: left;
 }
 
-.nav-color {
-    background-color: #01a6bf !important;
+.title-color {
+    color: #e1e8e1;
 }
 
-.nav-button-color {
-    color: #f9f9f9 !important;
+.page-wrap {
+    position: relative;
+    width: 100%;
+    float: left;
+    height: 150px;
+    overflow: hidden;
+    text-align: center;
 }
 
-.nav-position {
-    float: right !important;
+.page-title {
+    color: #1e1e1e;
 }
 
-.ul nav li {
-    text-transform: uppercase;
+#nav-color > li > a {
+    color: snow
 }
