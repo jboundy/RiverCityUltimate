@@ -6,18 +6,39 @@ namespace RiverCityUltimate.Core.Application
     {
         public string AuthorizationCode => "authorization_code";
 
-        [ConfigurationProperty("ClientId", DefaultValue = "", IsRequired = true)]
-        public string ClientId
-        {
-            get { return this["ClientId"].ToString(); }
-            set { this["ClientId"] = value; }
-        }
-
         [ConfigurationProperty("ProjectId", IsRequired = true)]
         public string ProjectId
         {
             get { return this["ProjectId"].ToString(); }
             set { this["ProjectId"] = value; }
+        }
+
+        [ConfigurationProperty("PrivateKeyId", IsRequired = true)]
+        public string PrivateKeyId
+        {
+            get { return this["PrivateKeyId"].ToString(); }
+            set { this["PrivateKeyId"] = value; }
+        }
+
+        [ConfigurationProperty("PrivateKey", IsRequired = true)]
+        public string PrivateKey
+        {
+            get { return this["PrivateKey"].ToString(); }
+            set { this["PrivateKey"] = value; }
+        }
+
+        [ConfigurationProperty("ClientEmail", IsRequired = true)]
+        public string ClientEmail
+        {
+            get { return this["ClientEmail"].ToString(); }
+            set { this["ClientEmail"] = value; }
+        }
+
+        [ConfigurationProperty("ClientId", IsRequired = true)]
+        public string ClientId
+        {
+            get { return this["ClientId"].ToString(); }
+            set { this["ClientId"] = value; }
         }
 
         [ConfigurationProperty("AuthUri", IsRequired = true)]
@@ -41,20 +62,6 @@ namespace RiverCityUltimate.Core.Application
             set { this["AuthProvider"] = value; }
         }
 
-        [ConfigurationProperty("ClientSecret", IsRequired = true)]
-        public string ClientSecret
-        {
-            get { return this["ClientSecret"].ToString(); }
-            set { this["ClientSecret"] = value; }
-        }
-
-        [ConfigurationProperty("FileId", IsRequired = true)]
-        public string FileId
-        {
-            get { return this["FileId"].ToString(); }
-            set { this["FileId"] = value; }
-        }
-
         [ConfigurationProperty("ClientCert", IsRequired = true)]
         public string ClientCert
         {
@@ -62,5 +69,25 @@ namespace RiverCityUltimate.Core.Application
             set { this["ClientCert"] = value; }
         }
 
+        [ConfigurationProperty("ApiKey", IsRequired = true)]
+        public string ApiKey
+        {
+            get { return this["ApiKey"].ToString(); }
+            set { this["ApiKey"] = value; }
+        }
+
+        [ConfigurationProperty("OAuthClientId", IsRequired = true)]
+        public string OAuthClientId
+        {
+            get { return this["OAuthClientId"].ToString(); }
+            set { this["OAuthClientId"] = value; }
+        }
+
+        [ConfigurationProperty("OAuthClientSecret", IsRequired = true)]
+        public string OAuthClientSecret
+        {
+            get { return this["OAuthClientSecret"].ToString(); }
+            set { this["OAuthClientSecret"] = value; }
+        }
     }
 }

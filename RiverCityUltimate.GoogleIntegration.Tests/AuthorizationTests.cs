@@ -10,14 +10,5 @@ namespace RiverCityUltimate.GoogleIntegration.Tests
         {
             Settings.Initialize();
         }
-
-        [Fact]
-        public void CanRetrieveAuthorizationFromGoogle()
-        {
-            var auth = new Authorization();
-            var result = auth.ConfigureCredentials().Result;
-
-            result.Should().NotBeNull();
-        }
     }
 }

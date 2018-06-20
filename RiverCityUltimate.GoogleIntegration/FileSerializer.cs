@@ -18,21 +18,23 @@ namespace RiverCityUltimate.GoogleIntegration
             _sheets = sheets;
         }
 
+        public FilesResource.GetRequest GetDoc(string id)
+        {
+            return _drive.Files.Get(id);
+        }
+
         public async Task<Spreadsheet> SheetStream(string spreadSheetId)
         {
             return await _sheets.Spreadsheets.Get(spreadSheetId).ExecuteAsync();
         }
 
-        public FilesResource.ExportRequest FileRequest(string fileId)
+        public FilesResource.ExportRequest FileRequest(string fileId, string encoding)
         {
-            //todo: should get rid of the plain text for the encoded type
-            return _drive.Files.Export(fileId, "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+            return _drive.Files.Export(fileId, encoding);
         }
 
-        public async Task<IDownloadProgress> FileStream(FilesResource.ExportRequest request)
+        public async Task<IDownloadProgress> FileStream(FilesResource.GetRequest request, MemoryStream stream)
         {
-            MemoryStream stream = new MemoryStream();
-
             request.MediaDownloader.ProgressChanged +=
                 progress =>
                 {

@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using RiverCityUltimate.Core;
 
 namespace RiverCityUltimate
 {
@@ -9,6 +10,7 @@ namespace RiverCityUltimate
     {
         protected void Application_Start()
         {
+            Settings.Initialize();
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

@@ -1,48 +1,63 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
+﻿using System;
+using System.Web.Mvc;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Auth.OAuth2.Flows;
-using Google.Apis.Auth.OAuth2.Requests;
+using Google.Apis.Auth.OAuth2.Mvc;
 using Google.Apis.Drive.v3;
-using Google.Apis.Http;
 using Google.Apis.Sheets.v4;
-using Google.Apis.Util;
 using RiverCityUltimate.Core;
 
 namespace RiverCityUltimate.GoogleIntegration
 {
-    public class Authorization
+    public class Authorization : FlowMetadata
     {
-        public IClock Clock { get; set; }
-
-        public async Task<UserCredential> ConfigureCredentials()
+        public override IAuthorizationCodeFlow Flow { get; }
+        public ServiceAccountCredential ServiceAccount { get; set; }
+        public Authorization()
         {
-            var flow = new GoogleAuthorizationCodeFlow(new GoogleAuthorizationCodeFlow.Initializer
+            Flow = new GoogleAuthorizationCodeFlow(new GoogleAuthorizationCodeFlow.Initializer
             {
                 ClientSecrets = new ClientSecrets
                 {
-                    ClientId = Settings.GoogleConfig.ClientId,
-                    ClientSecret = Settings.GoogleConfig.ClientSecret
+                    ClientId = Settings.GoogleConfig.OAuthClientId,
+                    ClientSecret = Settings.GoogleConfig.OAuthClientSecret
                 },
-                Scopes = new[] {
-                    DriveService.Scope.DriveFile,
-                    DriveService.Scope.Drive,
-                    SheetsService.Scope.SpreadsheetsReadonly
-                },
-                IncludeGrantedScopes = true,
-                HttpClientFactory = new HttpClientFactory()
-            });
+                Scopes = Scopes()
+                });
 
-            var tokenRequest = new TokenRequest
+            ServiceAccount = new ServiceAccountCredential(
+                new ServiceAccountCredential.Initializer(Settings.GoogleConfig.ClientEmail)
+                {
+                    Scopes = Scopes()
+                }.FromPrivateKey($@"{Settings.GoogleConfig.PrivateKey}"));
+
+            //ResponseToken = new AuthorizationCodeTokenRequest
+            //{
+            //    ClientId = Settings.GoogleConfig.ClientId,
+            //    ClientSecret = Settings.GoogleConfig.PrivateKey,
+            //    Code = Settings.GoogleConfig.AuthorizationCode,
+            //    GrantType = Settings.GoogleConfig.
+            //}.ExecuteAsync(new HttpClient
+            //    {
+            //        BaseAddress = new Uri(Settings.GoogleConfig.AuthUri)
+            //    }, 
+            //    Settings.GoogleConfig.TokenUri, CancellationToken.None, Clock).Result;
+
+        }
+
+        private string[] Scopes()
+        {
+            return new[]
             {
-                ClientId = Settings.GoogleConfig.ClientId,
-                ClientSecret = Settings.GoogleConfig.ClientSecret,
-                GrantType = Settings.GoogleConfig.AuthorizationCode
+                DriveService.Scope.DriveFile,
+                DriveService.Scope.Drive,
+                SheetsService.Scope.SpreadsheetsReadonly
             };
+        }
 
-            var tokenResponse = await tokenRequest.ExecuteAsync(flow.HttpClient, Settings.GoogleConfig.TokenUri, CancellationToken.None, Clock);
-
-            return new UserCredential(flow, "user", tokenResponse);
+        public override string GetUserId(Controller controller)
+        {
+            return "user";
         }
     }
 }

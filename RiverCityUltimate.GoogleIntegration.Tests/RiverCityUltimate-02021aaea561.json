@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "rivercityultimate-180117",
+  "private_key_id": "02021aaea561dced5f94e2e71da7cc03b35825e6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCWroGGaxxs8HMY\nQiUlHgPQM+IhqcKY6OlSBdPMe57+JzlOXaLoMtg3+heReq0DEdsqvwpA6mvolG96\ng/s5Oq87u1FK/cnSXsyqlgSWbYFez/A+di+lVkB9OmxtUp8tJ2ld1vlLPCZA/CWv\nVk5ZpsH7Ry0O8dkW0YefgC6WZyVQ7MPp+UZmfO/56aXSx1VPyBejlrN3dKf9XANC\nOMjOFpt8WdcRtEKLwlrqpcIGyMaAwpap3bSjU6NKr4IYlM3y+8KbQBBpV8RtWu21\nDS4In7F7BRWyxugpc05lJ/xpbTME8wlT5K1Zvvo1RDEpYniHjO9+7j3sYhOWwDpG\n6OGqM7EZAgMBAAECggEAC0M23jeyU7gzOhxzj08rhMvj+pUoPOqnyeAyoQWacC+5\nWlCoZQer3p88VLzhIqoaghruZsS+1Q8HOBaWWAQ5ZdMN8/d9NtKsJJH6/M1pjo8n\nS1vlGswUHOgZg6BZ0nOwLfnr/0IbL99I586hI5VRyXjb9tJ/4fM+Wl8n3EkQYnh6\nnL0s/njcrf2cvNhMU20//I4ood/PWuHe1mjh69GaTls4Z3LCoUbaYnJvynyd1pu6\njf2AeVbOCisD0UCILUMgtO8V6OMRvpMT59Nbj7ntnWuYchNijAMGfVPX9oYX98Xm\nGVUF8HjzRJ/bVn9VGlzLB+fTWBsZcX35qaJswfozqQKBgQDICbZ+OwIbmMr+AxRt\n+DFjIyTNjV78IU5IXpsPcWUczcSXM6eNeiLzSkERmvAj8Meqq7MCzXy7N67hnV4N\nyTpLxjLmt7Yz2vf7wdL2yWu1Dcx7Wm4GH4jVzJKfe4Smr6yxbbYI5n7nthenvyA+\n8iNBFhqnLOIm7Q2JhRE/dA7I9QKBgQDA1gCvksfuwLCOVhyruhIE6lFhzBBUJ99W\nRbLElnC8sRBjgCDS2wl8aSMCydegBBmx62b0DuTQdCcQxqkMhuvFYIvuChwiw6Ak\nx2SURFM/ETRt1gRy9q4cE2fADI5zaWBFfcIv1IoqZvh8pRh2loq3Oy8jC8cF2Qz2\ni79qlbtBFQKBgEfQdNvMg2005Wtb37G7ML/Olh/VaQxLSLdif3iD1TEKDlHaEYUR\nHAsL1WBkp2G/x27WRWX0L5tm2jnVLTb1zx/0/8Ekoxzqt6yCYSKIHUrasVZ3mJhK\nKe3Xi6wFxBGzb+Qi5v87AMRe8w8d5o2ykEWFkfwCeQ5QfFOqmg6Vs9khAoGBAK2D\nYlaZQqGIbNWGkoHLCc+2b8gJ8F9pCUL9sB/IJmUDBfYiImbYhK6Xg9NMf2MSjXRU\nluzgQe93tHcZ6p7FAH03pHFqU2rMj9rIN65Z1HYZKw3x10sCwCOvKlnacotStDeT\nMxoKqtAAm3K8s0hxqRu6e22TeV+/sDRgBrsHQ9kJAoGARULURAb/R4koA/jhEQKY\nEbgI7YGYXB8i4/7iS4F7zqvE/8vJ9nsg2FHS8YKX/WgZnLD5hC9LUJCF6qzgdFwC\n4QouJpyEmZY5MHCWEA3scCtjRClhGSqMHHDqaJrm/2uEKjibPyBBAzDXmgUajWZH\nDecIVB441ZwxvsBjnn8+Qsc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "rivercityultimateservice@rivercityultimate-180117.iam.gserviceaccount.com",
+  "client_id": "111784929349649799216",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/rivercityultimateservice%40rivercityultimate-180117.iam.gserviceaccount.com"
+}
