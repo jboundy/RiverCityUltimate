@@ -18,23 +18,23 @@ namespace RiverCityUltimate.Controllers
 
         public HomeController()
         {
-            _authFlow = new Authorization();
-            var driveService = new DriveService(new BaseClientService.Initializer
-            {
-                ApiKey = Settings.GoogleConfig.ApiKey
-            });
-            _fileSerializer = new FileSerializer(driveService, new SheetsService());
+            //_authFlow = new Authorization();
+            //var driveService = new DriveService(new BaseClientService.Initializer
+            //{
+            //    ApiKey = Settings.GoogleConfig.ApiKey
+            //});
+            //_fileSerializer = new FileSerializer(driveService, new SheetsService());
         }
         public async Task<ActionResult> Index()
         {
-            var result = await new AuthorizationCodeMvcApp(this, _authFlow).AuthorizeAsync(CancellationToken.None);
+            //var result = await new AuthorizationCodeMvcApp(this, _authFlow).AuthorizeAsync(CancellationToken.None);
 
-            if (result.Credential != null)
-            {
-                var stream = new MemoryStream();
-                var docRequest =_fileSerializer.GetDoc("1GXgo5vhokYYspZc41ad2A3tmvQVHT4PbSZ0PHQo59oc");
-                var doc = await _fileSerializer.FileStream(docRequest, stream);
-            }
+            //if (result.Credential != null)
+            //{
+            //    var stream = new MemoryStream();
+            //    var docRequest =_fileSerializer.GetDoc("1GXgo5vhokYYspZc41ad2A3tmvQVHT4PbSZ0PHQo59oc");
+            //    var doc = await _fileSerializer.FileStream(docRequest, stream);
+            //}
             return View();
         }
 

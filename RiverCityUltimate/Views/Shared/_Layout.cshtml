@@ -8,14 +8,11 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-<div class="page-wrap">
     @Html.Partial("_nav")
-        <div class="container body-content">
-            <h1 class="page-title">@ViewBag.Title</h1>
-            @RenderBody()
-        </div>
+    <div class="container body-content">
+        <h1 class="page-title">@ViewBag.Title</h1>
+        @RenderBody()
     </div>
-    @Html.Partial("_footer")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/application")

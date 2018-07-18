@@ -1,9 +1,4 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-/* Set padding to keep content from hitting the edges */
+﻿/* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
@@ -23,30 +18,19 @@ textarea {
     max-width: 280px;
 }
 
-.footer {
-    width: 100%;
-    color: #999999;
-    background-color: #333333;
-    float: left;
-}
-
 .title-color {
     color: #e1e8e1;
 }
 
-.page-wrap {
+/*.page-wrap {
     position: relative;
     width: 100%;
     float: left;
     height: 150px;
     overflow: hidden;
     text-align: center;
-}
+}*/
 
 .page-title {
     color: #1e1e1e;
-}
-
-#nav-color > li > a {
-    color: snow
 }
